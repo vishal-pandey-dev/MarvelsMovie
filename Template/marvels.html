@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="theme-color" content="#9933cc">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'marvels.css' %}">
+</head>
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<body>
+   <section id="marv">
+      <center>
+      <img id="do" src="https://dl.dropboxusercontent.com/s/orkirt9ffophrcr/marvel-logo-34283.png?dl=0">
+      </img>
+      <h2 id="mighty" class="aven">
+ WORLD'S MIGHTY HEROS MOVIES COLLECTION
+      </h2>
+      </center>
+ 
+      <img id="all" src="https://dl.dropboxusercontent.com/s/6elbsx1gluq2bdb/24456-6-avengers-file.png?dl=0">
+      </img>
+ 
+      <h4 class="mov" id="more">The Marvel Cinematic Universe (MCU) films are a series of American superhero films produced by Marvel Studios based on characters that appear in publications by Marvel Comics. The MCU is the shared universe in which all of the films are set. The films have been in production since 2007, and in that time Marvel Studios has produced and released 23 films.This includes Avengers: Endgame, which is the highest-grossing film of all time.
+      </h4>
+      <h4 class="mov" id="more">Marvel Studios releases its films in groups called "Phases".
+      </h4>
+         <center><i id="arr"class="fas fa-angle-double-down"></i>
+          </center>
+    </section>
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<section id="button">
+ <center>
+ <h1 id="h1"><u>Movies </u></h1></center>
+ <div class="movie">
+   
+   <a href="{% static 'allmovies.html' %}">
+   <div class="heros">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/5fipuaa7lvs4yw9/5965.jpg?dl=0"><b class="names">All Movies</b></img>
+   </div>
+   </a>
+   
+   <div class="sorted">
+   READ MORE</br>
+       
+   <i class="fas fa-angle-double-down"></i>
+   </div>
+   
+   <div class="content">
+   
+   <a href="{% static 'ironman.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/h9ik3gyrvi9mzt8/546723.jpg?dl=0"><b class="names">Iron Man</b></img> 
+   </div>
+   </a>
+   
+   <a href="{% static 'captainamerica.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/b6v07hus2jcbex7/55571.jpg?dl=0"><b class="names">Captain America</b></img> 
+   </div>
+    </a>        
+    
+    <a href="{% static 'Thor.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/36v4h7gzlqyhgnd/222132.jpg?dl=0"><b class="names">Thor</b></img> 
+   </div>
+     </a>
+ 
+    <a href="{% static 'hulk.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/9yh2efko5emnmh4/146393.jpg?dl=0"><b class="names">Incredible Hulk</b></img>
+   </div>
+      </a>
+      
+   <a href="{% static 'Avengers.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/bld2756lotvwqww/97738.png?dl=0"><b class="names">Avengers</b></img>
+   </div>
+   </a>
+   
+   <a href="{% static 'spiderman.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/maded722pxcj2qh/88379.jpg?dl=0"><b class="names">Spider Man</b></img>
+   </div>
+   </a>
+   
+   <a href="{% static 'blackpanther.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/pzxpd7f0be46062/54049.jpg?dl=0"><b class="names">Black Panther</b></img>
+   </div>
+   </a>
+   
+   <a href="{% static 'doctorstrange.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/z5pklags9qejjm3/620043.jpg?dl=0"><b class="names">Doctor Strange</b></img>
+   </div>
+   </a>
+   
+   <a href="{% static 'antman.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/ejtl5c8xy9a4138/1101791.jpg?dl=0"><b class="names">Ant Man</b></img>
+   </div>
+   </a>
+   
+   <a href="{% static 'guardians.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/rnnlvyvkm6ze7io/37946.jpg?dl=0"><b class="names">Guardians of Galaxy</b></img>
+   </div>
+   </a>
+   
+   <a href="{% static 'captainmarvel.html' %}">
+   <div class="hero">
+   <img class="stick" src="https://dl.dropboxusercontent.com/s/2iv6t1r07nq5yct/1103410.jpg?dl=0"><b class="names">Captain Marvel</b></img>
+   </div>
+   </a>
+   </div>
+   
+</div>
+</section>
+
+<script>
+var coll = document.getElementsByClassName("sorted");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxccccccxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<section id="contact">
+   <div class="about">
+   <center>
+   <h2 class="abo"><i><u>About </u></i></h2>
+   <p class="abbo">The Marvel Cinematic Universe (MCU) is shared universe centered on a series of superhero films, independently produced by Marvel Studios and based on characters that appear in American comic books Written by Stan Lee.</p>
+   <p class="abbo">Now all Marvel fans need special place to see their favourite movies at one place.
+    <div id="line">
+   </div>
+   <h2 class="abo"><i><u>Follow us</u></i><h2>
+    <div class="media">
+                <button><a href=" https://m.facebook.com/profile.php?ref=bookmarks"><i class="fab fa-facebook-f" id="facebook"></i></a>
+                </button> 
+                <button><a href="https://www.instagram.com/vishal_pandey_07/"><i class="fab fa-instagram" id="insta"></i></a>
+                 </button> 
+                 <button><a href="https://github.com/Vishalpandey1247"><i class="fab fa-github" id="git"></i></a>
+                 </button>
+                 <button><a href="https://mobile.twitter.com/VISHALP50203892"><i class="fab fa-twitter" id="tweet"></i></a>
+                 </button>
+      </center> 
+    </div>
+</section>
+
+ <div id="copy">
+         <center>
+         <p id="last" class="last1">© 2020 : Marvel's Movie Collection</p>
+         </center>
+      </div>
+</body>
+</html>
