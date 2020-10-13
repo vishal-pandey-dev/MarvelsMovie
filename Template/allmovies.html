@@ -1,82 +1,112 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="hulk.css">
+   <link rel="stylesheet" href= "{% static 'allmovies.css' %}">
      <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet"> 
      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"> 
 </head>
-
-
-
 <body>
-<section id="hulk">
+<section id="infinity">
 <center>
-    <h2 class="bruce">INCREDIBLE HULK</h2>
-  
-<img id="hulkimage" src="https://dl.dropboxusercontent.com/s/s603yw8cbq7i1sm/unnamed.png?dl=0"></img>
+    <h2 class="saga">COLLECTION OF ALL MOVIES WITH PHASES</h2>
  </center>
-  <p class="p">Representing the aftermath of the Gamma Bomb. 'The Incredible Hulk' tells the story of Dr. Bruce Banner, who seeks a cure for his unique condition, which causes him to turn into an emotionally stressed giant green monster. Banner comes close to a cure. while on  the run from the military that seeks his capture.But when a new creature emerges "The Abomination" all is lost.
+ <br />
+ <center>
+     <img id="allheroimage" src="https://dl.dropboxusercontent.com/s/akg95ivsy3u2eom/kindpng_1159036.png?dl=0"></img>
+ </center>
+  <p class="p">The Marvel Cinematic Universe (MCU) is an American media franchise and sharedThe Marvel Cinematic Universe (MCU) is an American media franchise universe focused on a series of Marvel Studios independently created superhero filma focused on characters that appear in Marvel Comics' American comic books.The brand encompasses comic books, short films,TV shows, and digital media. The shared universe was created by crossing over common plot elements, environments, cast, and characters, much like the original Marvel Universe in comic books.
+ <style>
+     button.trailor{
+    border-radius:10px;
+    font-size:30px; 
+    border-color:transparent ;
+    }
+a.lnk{ text-decoration:none;
+           color:#e2e2e3;
+           font-family:'Yanone Kaffeesatz', sans-serif;
+           }
+ul{  list-style-type:disc;
+       line-height:80%}
+
+</style>
 
 </p>
-</section>
-<!---gdgdhdhdhdhdhsjsjkskwpwoskwpoepwpeijr7e8392kwbe89ei2y2hksocubeksozxhjeo--->
-
-<section id="movies">
-    <h1 id="h1"><u>Movie </u></h1></center>
-     <div class="movie">
-
-      <div class="HULK">
-       <i class="fab fa-imdb" id="e"><b id="f">  :6.9/10</b></i>
-       <p class="g"><b>&#127813:   80%</b></p>
-         <img class="hulks" src="https://dl.dropboxusercontent.com/s/z73k4mgnlthvbqq/568448.jpg?dl=0"><b>INCREDIBLE HULK</b></img>  </div>
+  </section>
+  
+<!---_-_-_-_-_-_-_--_-_-_-_-_-_-_-_-_--_-_-_-_-_-_--___--_-_-_-_--_-__--__--->  
+  
+  <section id="movies">
+    <h1 id="h1">Phases </h1></center>
+       <div class="ln">
+   </div>
+ <div class="movie">
+   <h2 class="phases">Phase1</h2>
+   
+   {% for movie in movies %}
+   
+     <div class="A">
+       <i class="fab fa-imdb" id="e"><b id="f">  : {{ movie.imdb }} /10</b></i>
+       <p class="g"><b>&#127813:   {{ movie.rotten }} %</b></p>
+      <img class="AVEN" src= {{ movie.image.url }} ><b>{{ movie.name }}</b></img>  </div>
       <div class="content">
 <font size="5" face="'Yanone Kaffeesatz', sans-serif">
-  <table id="hulkt">
+  <table id="ironmant">
    <tr>
    <td><b>Production
 company</b></td>
    <td>
-   <ul class="ls">
-   <li>Marvel Studios</li>
+   <ul>
+   {% for i in comp %}
+   <li>{{ i.name }}</li>
+   {% endfor %}
    </ul>
    </td>
    </tr>
    <tr>
    <td><b>Directed by:</b></td>
    <td>
-   <ul class="ls"><li>Louis Leterrier </li></ul>
+   <ul>
+   {% for i in direct %}
+   <li>{{ i.name }}</li>
+   {% endfor %}
+   </ul>
    </td>
    
    </tr>
    <tr>
    <td><b>Produced by:</b></td>
    <td>
-   <ul class="ls">
-   <li>Kevin Feige</li>
-   <li>Gale Anne Hurd</li>
-   <li>Avi Arad</li>
+   <ul>
+   {% for i in produce %}
+   <li>{{ i.name }}</li>
+   {% endfor %}
    </ul>
    </td>
    </tr>
    <tr>
    <td><b>Starring:</b></td>
    <td>
-   <ul class="ls">
-   <li>Edward Norton</li>
-   <li>Liv Tyler</li>
-   <li>Tim Roth</li>
-   <li>Tim Blake Nelson</li>
-   <li>Ty Burrell</li>
-   <li>William Hurt</li>
+   <ul>
+   {% for i in movies %}
+     {% for j in connector %}
+         {% if i == j.movie %} 
+               <li>{{ j.actor.name }}</li>
+         {% endif %}
+     {% endfor %}
+{% endfor %}
+             
+   
    </ul>
    </tr>
    <tr>
    <td><b>Running Time:</b>
    <td>
-   <ul class="ls">
-   <li>112 minutes</li>
+   <ul>
+   <li>{{ movie.runtime }}minutes</li>
    </ul>
    </td>
    </tr>
@@ -84,8 +114,8 @@ company</b></td>
    <tr>
    <td><b>Language:</b>
    <td>
-   <ul class="ls">
-   <li>English</li>
+   <ul>
+   <li>{{ movie.language }}</li>
    </ul>
    </td>
    </tr>
@@ -94,23 +124,38 @@ company</b></td>
    <td><b>Box Office:</b>
    </td>
    <td>
-   <ul class="ls">
-   <li>$264.8 million</li>
+   <ul>
+   <li>${{ movie.collection }}million</li>
+   </ul>
+   </td>
+   </tr>
+   <tr>
+   <td><b>Release Date:</b>
+   </td>
+   <td>
+   <ul>
+   <li>{{ movie.release }}</li>
    </ul>
    </td>
    </tr>
    </table>
 </font>
-   </div> 
+    <center>
+    <button class="trailor">
+    <a class="lnk" href="https://youtu.be/8ugaeA-nMTc"> <b>Watch Trailer</b> </a>
+    </button>
+    </center>
+   </div>
+   {% endfor %}
    
    
-</div>
-</section>
-
- 
-
-<script>
-var coll = document.getElementsByClassName("HULK");
+   
+   </div>
+  </section>
+  
+  
+  <script>
+var coll = document.getElementsByClassName("A");
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -125,7 +170,12 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
-<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  
+  
+  
+  
+<!--------------------------------------------------->
+  
 <section id="contact">
    <div class="about">
    <center>
@@ -156,5 +206,3 @@ for (i = 0; i < coll.length; i++) {
   
 </body>
 </html>
-
-
