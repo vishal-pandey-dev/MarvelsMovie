@@ -1,20 +1,22 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="captainmarvel.css">
+   <link rel="stylesheet" href="{% static 'blackpanther.css' %}">
      <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet"> 
      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"> 
 </head>
 <body>
-<section id="captainmarvel">
+<section id="blackpanther">
 
 <center>
-  <h2 class="marvel">CAPTAIN MARVEL</h2>  
+  <h2 class="tchaka">BLACK PANTHER</h2>  
 </center>
 <center>
-    <img id="captainimage" src="https://dl.dropboxusercontent.com/s/xw5gm21f97frd2z/PngItem_5101101.png?dl=0"></img>
+    <img id="pantherimage" src="https://dl.dropboxusercontent.com/s/8aso3d1x82rx3d9/Black-Panther-PNG-HD%20%281%29.png?dl=0"></img>
 </center>
   <p class="p">T'Challa now prepares to be proclaimed new king of Wakanda after his father's death. T'Challa, however, finds that his position is now being threatened by the arrival of an old adversary called Killmonger, which endangers both Wakanda and the planet. Teaming with the Dora Milaje, his little sister Shuri and his CIA ally Everett K. Ross, T'Challa must harness the  Black Panther's forces to fight against his enemy and save Wakanda from destruction.
 </p>
@@ -26,19 +28,19 @@
     <h1 id="h1"><u>Movies</u></h1></center>
  <div class="movie">
    
-   <div class="Earth">
-   <i class="fab fa-imdb" id="e"><b id="f">  :6.9/10</b></i>
-   <p class="g"><b>&#127813:   79%</b></p>
-   <img class="fury" src="https://dl.dropboxusercontent.com/s/jvtbh2stv49ik8p/2155558.jpg?dl=0"><b>CAPTAIN MARVEL</b></img></div>
-   
-   <div class=content>
-   <font size="5" face="'Yanone Kaffeesatz', sans-serif">
-  <table id="captainmarvelt">
+   <div class="vakanda">
+   <i class="fab fa-imdb" id="e"><b id="f">  :7.3/10</b></i>
+   <p class="g"><b>&#127813:   98%</b></p>
+   <img class="tchala" src="https://dl.dropboxusercontent.com/s/ictjaqm3tzkeaot/54053.jpg?dl=0"><b>BLACK PANTHER</b></img></div>
+ 
+   <div class="content">
+  <font size="5" face="'Yanone Kaffeesatz', sans-serif">
+  <table id="blackpanthert">
    <tr>
    <td><b>Production
 company</b></td>
    <td>
-   <ul class="m">
+   <ul class="bp">
    <li>Marvel Studios</li>
    </ul>
    </td>
@@ -46,14 +48,14 @@ company</b></td>
    <tr>
    <td><b>Directed by:</b></td>
    <td>
-   <ul class="m"><li>Anna Boden</li>
-   <li>Ryan Fleck</li></ul>
+   <ul class="bp"><li>Ryan Coogler </liv></ul>
    </td>
+   
    </tr>
    <tr>
    <td><b>Produced by:</b></td>
    <td>
-   <ul class="m">
+   <ul class="bp">
    <li>Kevin Feige</li>
    </ul>
    </td>
@@ -61,24 +63,25 @@ company</b></td>
    <tr>
    <td><b>Starring:</b></td>
    <td>
-   <ul class="m">
-   <li>Brie Larson</li>
-   <li>Samuel L. Jackson</li>
-   <li>Ben Mendelsohn</li>
-   <li>Djimon Hounsou</li>
-   <li>Lee Pace</li>
-   <li>Lashana Lynch</li>
-   <li>Gemma Chan</li>
-   <li>Annette Bening</li>
-   <li>Clark Gregg</li>
-   <li>Jude Law</li>
+   <ul class="bp">
+   <li>Chadwick Boseman</li>
+   <li>Michael B. Jordan</li>
+   <li>Lupita Nyong'o</li>
+   <li>Danai Gurira</li>
+   <li>Martin Freeman</li>
+   <li>Daniel Kaluuya</li>
+   <li>Letitia Wright</li>
+   <li>Winston Duke</li>
+   <li>Angela Bassett</li>
+   <li>Forest Whitaker</li>
+   <li>Andy Serkis</li>
    </ul>
    </tr>
    <tr>
    <td><b>Running Time:</b>
    <td>
-   <ul class="m">
-   <li>124 minutes</li>
+   <ul class="bp">
+   <li>134 minutes</li>
    </ul>
    </td>
    </tr>
@@ -86,7 +89,7 @@ company</b></td>
    <tr>
    <td><b>Language:</b>
    <td>
-   <ul class="m">
+   <ul class="bp">
    <li>English</li>
    </ul>
    </td>
@@ -96,20 +99,20 @@ company</b></td>
    <td><b>Box Office:</b>
    </td>
    <td>
-   <ul class="m">
-   <li>$1.128 million</li>
+   <ul class="bp">
+   <li>$1.347 billion</li>
    </ul>
    </td>
    </tr>
    </table>
    </font>
-  </div>
+   </div>
    
  </div>
 </section>
-  
+
 <script>
-var coll = document.getElementsByClassName("Earth");
+var coll = document.getElementsByClassName("vakanda");
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -122,9 +125,11 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
-}  
-</script>  
-  
+}
+</script>
+
+
+
 <!--------------------------------------------------->
   
 <section id="contact">
